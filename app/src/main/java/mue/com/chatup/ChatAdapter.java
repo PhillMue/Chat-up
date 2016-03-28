@@ -11,9 +11,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by mue on 3/20/16.
- */
+import mue.com.chatup.Chat;
+import mue.com.chatup.R;
+
+
+
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     private List<Chat> mDataset;
     private SparseBooleanArray selectedItems;
@@ -27,9 +29,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         public ViewHolder(View v) {
             super(v);
             mTextView = (TextView) itemView.findViewById(R.id.tvMessage);
-            //mCardView = (CardView) itemView.findViewById(R.id.card_view);
+            //mCardView = (CardView) itemView.findViewById(R.id.card_view); 
         }
     }
+
     public ChatAdapter(Context context, List<Chat> myDataset, String id) {
         mContext = context;
         mDataset = myDataset;
@@ -78,5 +81,3 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         return mDataset.size();
     }
 }
-
-
