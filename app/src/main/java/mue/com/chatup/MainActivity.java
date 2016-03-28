@@ -56,13 +56,14 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 String message = metText.getText().toString();
 
-                if(!message.isEmpty()) {
+                if (!message.isEmpty()) {
 
                     //Firebase - Envia mensagem
                     mFirebaseRef.push().setValue(new Chat(message, mId));
                 }
 
                 metText.setText("");
+
             }
         });
 
