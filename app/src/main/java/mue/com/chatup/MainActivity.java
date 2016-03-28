@@ -3,9 +3,17 @@ package mue.com.chatup;
 import android.app.Activity;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.gdgcampinas.chat_firebase.animation.SlideInOutLeftItemAnimator;
 
 import java.util.ArrayList;
 import java.util.List;
