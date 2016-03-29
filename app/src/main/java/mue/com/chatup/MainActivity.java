@@ -13,8 +13,7 @@ import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.gdgcampinas.chat_firebase.animation.SlideInOutLeftItemAnimator;
-
+import mue.com.chatup.animation.SlideInOutLeftItemAnimator;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,7 +57,7 @@ public class MainActivity extends Activity {
 
                 if (!message.isEmpty()) {
 
-                    //Firebase - Envia mensagem
+
                     mFirebaseRef.push().setValue(new Chat(message, mId));
                 }
 
@@ -74,7 +73,7 @@ public class MainActivity extends Activity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 if(dataSnapshot != null && dataSnapshot.getValue() != null) {
 
-                    //Firebase - Converte a resposta em um objeto do tipo Chat
+
                     Chat model = dataSnapshot.getValue(Chat.class);
 
 
